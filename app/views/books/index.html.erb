@@ -1,0 +1,26 @@
+<div　class="row">
+	<div id="error_explanation">
+	  <% if @book.errors.any? %>
+	    <h2><%= @book.errors.count %> error prohibited this obj from being saved:</h2>
+	    <ul>
+	      <% @book.errors.full_messages.each do |message| %>
+	        <li><%= message %></li>
+	      <% end %>
+	    </ul>
+	  <% end %>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-md-3">
+		<%= render 'User_info', user: @user %>
+		<%= render 'New_book', book: @book %>
+	</div>
+	
+	<div class="col-md-8 offset-md-1">
+		<%= render 'Books', book: @books %>
+	</div>
+</div>
+
+
+

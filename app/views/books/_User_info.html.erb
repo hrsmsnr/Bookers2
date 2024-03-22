@@ -1,0 +1,21 @@
+<div class="block">
+	<h2>User info</h2>
+	<%= image_tag user.get_profile_image, size: "100x100" %>
+	
+	<table class="table mb-3">
+		<tbody>
+			<tr>
+				<th>name</th>
+				<th> <%= user.name %> </th>
+			</tr>
+			<tr>
+				<th>introduction</th>
+				<th> <%= user.introduction %> </th>
+			</tr>
+		</tbody>
+	</table>
+	
+	<%= link_to edit_user_path(user.id) , class: "btn btn-outline-secondary btn-block edit_user_(user_id)" do %>
+		<i class="fa-solid fa-user-gear"></i>
+	<% end %>
+</div>
